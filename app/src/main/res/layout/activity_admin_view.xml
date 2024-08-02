@@ -6,14 +6,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#100F0F"
+    android:textAlignment="center"
     tools:context=".adminView">
 
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
-        android:layout_marginBottom="75dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginBottom="102dp"
         android:text="Lista de Vencimientos Diarios"
         android:textColor="#EDE3E3"
         app:layout_constraintBottom_toTopOf="@+id/gridLayout"
@@ -23,13 +24,12 @@
 
     <GridLayout
         android:id="@+id/gridLayout"
-        android:layout_width="0dp"
+        android:layout_width="188dp"
         android:layout_height="0dp"
         android:layout_gravity="center"
-        android:layout_marginStart="6dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginBottom="138dp"
-        android:columnCount="3"
+        android:layout_marginBottom="101dp"
+        android:columnCount="2"
+        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

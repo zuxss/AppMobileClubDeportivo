@@ -1,5 +1,6 @@
 package com.example.apptecnicatura
 
+import android.graphics.Color
 import android.os.Build
 import android.os.Bundle
 import android.widget.GridLayout
@@ -30,10 +31,11 @@ class adminView : AppCompatActivity() {
         for(fila in resultadosConsulta){
             for(dato in fila){
                 val textView = TextView(this)
+                textView.setTextColor(Color.WHITE)
                 textView.text = dato
                 val params = GridLayout.LayoutParams()
-                params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED,1F)
-                params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED,1F)
+                params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED,2F)
+                params.columnSpec = GridLayout.spec(GridLayout.UNDEFINED,2F)
                 textView.layoutParams = params
                 gridLayoutResult.addView(textView)
             }

@@ -1,6 +1,7 @@
 package com.example.apptecnicatura
 
 
+import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
 import android.os.Build
@@ -16,6 +17,7 @@ import java.time.format.DateTimeFormatter
 class HomeScreenActivity : AppCompatActivity() {
     private lateinit var databaseHelper: DatabaseHelper
 
+    @SuppressLint("SetTextI18n")
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,8 +36,9 @@ class HomeScreenActivity : AppCompatActivity() {
 
                 val inscriptionDate =  userDetails["inscriptiondate"] as String
 
-                findViewById<TextView>(R.id.nameText).text = userDetails["name"] as String
-                findViewById<TextView>(R.id.ageText).text = (userDetails["age"] as Number).toString()
+                findViewById<TextView>(R.id.nameText).text = "Nombre: ${userDetails["name"] as String}"
+                findViewById<TextView>(R.id.ageText).text = "Edad: ${(userDetails["age"] as Number)}"
+
                 findViewById<TextView>(R.id.inscriptionDate).text = inscriptionDate
 
                 if(userDetails["paymentdate"] != null){

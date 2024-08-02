@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0B0A0A"
+    tools:context=".HomeScreenActivity">
+
+    <TextView
+        android:id="@+id/nameText"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="25dp"
+        android:textColor="#FAF6F6"
+        app:layout_constraintBottom_toTopOf="@+id/ageText"
+        app:layout_constraintEnd_toEndOf="@+id/status"
+        app:layout_constraintStart_toStartOf="@+id/ageText"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginBottom="18dp"
+        android:text="Bienvenido"
+        android:textColor="#F3EBEB"
+        app:layout_constraintBottom_toTopOf="@+id/nameText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inscriptionDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginEnd="44dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textColor="#FAF8F8"
+        app:layout_constraintBottom_toTopOf="@+id/paydateText"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/InscriptionDate" />
+
+    <TextView
+        android:id="@+id/InscriptionDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="21dp"
+        android:text="Fecha de Inscripción"
+        android:textColor="#EFEDED"
+        app:layout_constraintBottom_toTopOf="@+id/inscriptionDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ageText" />
+
+    <EditText
+        android:id="@+id/paymentDate"
+        android:layout_width="302dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="date"
+        android:textColor="#EFE6E6"
+        app:layout_constraintBottom_toTopOf="@+id/textView12"
+        app:layout_constraintEnd_toEndOf="@+id/textView12"
+        app:layout_constraintStart_toEndOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="18dp"
+        android:text="Próxima fecha de vencimiento"
+        android:textColor="#F8F5F5"
+        app:layout_constraintBottom_toTopOf="@+id/paymentDate"
+        app:layout_constraintStart_toStartOf="@+id/paymentDate"
+        app:layout_constraintTop_toBottomOf="@+id/makePayDate" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="16dp"
+        android:text="Estado de la Membresia"
+        android:textColor="#FAF7F7"
+        app:layout_constraintBottom_toTopOf="@+id/userStatus"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/paymentDate" />
+
+    <Button
+        android:id="@+id/PayButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginBottom="36dp"
+        android:text="Pagar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/userStatus"
+        app:layout_constraintTop_toBottomOf="@+id/userStatus" />
+
+    <TextView
+        android:id="@+id/userStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15dp"
+        android:text="Membresia Vencida"
+        android:textColor="#C5BBBB"
+        app:layout_constraintBottom_toTopOf="@+id/PayButton"
+        app:layout_constraintStart_toStartOf="@+id/textView12"
+        app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+    <TextView
+        android:id="@+id/ageText"
+        android:layout_width="62dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="44dp"
+        android:layout_marginBottom="59dp"
+        android:textColor="#F6EBEB"
+        app:layout_constraintBottom_toTopOf="@+id/InscriptionDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameText" />
+
+    <TextView
+        android:id="@+id/paydateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="12dp"
+        android:text="Fecha de pago"
+        android:textColor="#EFEAEA"
+        app:layout_constraintBottom_toTopOf="@+id/makePayDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inscriptionDate" />
+
+    <EditText
+        android:id="@+id/makePayDate"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="text"
+        android:textColor="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/textView11"
+        app:layout_constraintEnd_toEndOf="@+id/inscriptionDate"
+        app:layout_constraintStart_toStartOf="@+id/paydateText"
+        app:layout_constraintTop_toBottomOf="@+id/paydateText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
